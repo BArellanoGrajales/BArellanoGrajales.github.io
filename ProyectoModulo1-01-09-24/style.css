@@ -1,0 +1,238 @@
+html{
+  --fondo-principal: #f6f9fe;
+  --color-primario: #05555c;
+  --color-primario-claro: #eaf3fa;
+  --color-enlaces: #186f78;
+  --color-texto: #3f7277;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #206064;
+  color: #fff;
+  padding-top: 20px;
+  padding: 20px;
+}
+
+#sidebar .logo-container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#sidebar img.logo {
+  width: 100%;
+  height: auto;
+}
+
+#sidebar .nav-link {
+  color: #206064;
+  background-color: #c4cacc;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#sidebar .nav-link.active {
+  background-color: #b0b7b9;
+}
+
+#content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.grupodebotones {
+  margin-bottom: 20px;
+  text-align: center;
+  --color-primario: #05555c;
+
+}
+
+.grupodebotones .boton {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.caja {
+  position: relative;
+  flex-basis: calc(33.333% - 10px);
+  margin-bottom: 15px;
+}
+
+.caja img {
+  width: 100%;
+  height: auto;
+}
+
+.cobertura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.caja:hover .cobertura {
+  opacity: 1;
+}
+
+.grupodebotones{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grupodebotones .boton{
+  display: inline-block;  /* inline (da la instrucion para que todos los elementos se comporten linealmente   */ 
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #c8d1d8;
+  color: var(--color-primario);
+  font-style: 12px;
+  font-weight: 800;
+  text-transform: uppercase; /* se utiliza para convertir todo el texto de un elemento a mayusculas, sin importar c0mo esta escrito originalmente en el HTML */ 
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: help;   /* da propiedades al dise;o del cursor */ 
+}
+
+.grupodebotones .boton.activo{
+  background-color: var(--color-primario);
+  color: var(--fondo-principal);
+}
+
+.grupodebotones .boton:hover{
+  background-color: var(--color-primario);
+  color: var(--fondo-principal);
+}
+
+header.encabezado {
+  display: flex;
+  justify-content: center;
+  color: #206064;
+}
+
+div.galeria{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+}
+
+div.galeria .caja{
+  float: left;
+  justify-content: flex-end; /* Alinea los elementos hacia la derecha */
+  position: relative;
+  margin: 4px;
+  width: calc(33.33% - 8px);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.caja img{
+  float: left;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+}
+
+div.galeria .caja:hover img{
+  transform: scale(1.15);
+}
+
+.caja .cobertura{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(5,85,92,0.7);
+  color: var(--fondo-principal);
+  padding: 15px;
+  overflow: hidden;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.caja:hover .cobertura{
+  opacity: 1;
+}
+
+.caja .cobertura a{
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid var(--fondo-principal);
+  color: var(--fondo-principal);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.caja .cobertura a:hover{
+  background-color: var(--fondo-principal);
+  color: var(--color-primario);
+}
+
+@media(max-width: 1024px){
+  div.galeria .caja{
+    width: calc(50% - 8px);
+  }
+}
+
+@media(max-width: 600px){
+    div.galeria .caja{
+    width: 100%;
+    margin: 4px 0px;
+  }
+}
+
+.map-container {
+  width: 100%; /* Esto hará que el contenedor ocupe todo el ancho disponible */
+  max-width: 1200px; /* Puedes ajustar este valor según necesites */
+  margin: 0 auto; /* Centra el mapa si quieres que ocupe todo el ancho */
+}
+
+iframe {
+  width: 100%; /* Asegura que el iframe ocupe todo el ancho del contenedor */
+}
+
+.custom {
+  color:#05555c;
+}

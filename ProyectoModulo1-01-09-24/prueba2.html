@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio-de-animales</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    
+    <!--  menu lateral izquierdo de navegación  -->
+       <!-- sidebar   esto lo hacer vertical el menu de navegación no es necesario un div -->
+    <nav id="sidebar">
+        <div class="logo-container">
+            <img src="image-jalogo.png" class="logo" alt="logo">
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#hola">HOLA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#galeria">GALERÍA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#ubicacion">UBICACIÓN</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--  debo de hacer una distinción entre cual es mi nav y cual es mi contenedor .   este grande lo comienza a dividir  -->
+    <div id="content">
+        <section id="hola">
+            <h1 class="grupodebotones custom">I'M <span class="name">Beatriz Arellano Grajales</span></h1>
+           
+            
+             <!-- comienza el carrusel  -->
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://i.blogs.es/b4b276/noemi-macavei-katocz-c7buirbqapa-unsplash/450_1000.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.avCdDzZ7NYvauOsZK29N8QAAAA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.3j2xJRpfmtHAk1v9ANzOeQAAAA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">                 
+                </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+        <section id="galeria" class="portafolio">
+            <header class="encabezado">
+                <h1>Animales del Mundo</h1>
+            </header>
+            <main class="contenedorprincipaldelportafolio">
+
+                <!--  comenzamos con los botones interactivos  y los agrupamos para aplicar estilos comunes--> 
+			
+                <!-- explicacion del uso de data-filter=""*:
+                data-: Es un prefijo que se utiliza para crear atributos personalizados en HTML.
+                filter: Es el nombre del atributo personalizado. En este caso, se utiliza para filtrar elementos.
+                ""*: Es el valor del atributo personalizado. El uso del asterisco es un comodín para seleccionar todos los elementos 
+                cuando enves del (astedisco) se usa .caninos / .gatos / .reptiles es para darle a entender a la maquina (por medio de un identificador tecnico) que acontinuaci[on 
+                se filtrar[an cierto tipo de elementos por lo que los nombre pueden ser iguales o simplemente darse a entender. 
+                -->
+
+                <div class="grupodebotones">
+                    <button class="boton btn btn-secondary activo" data-filter="*">Todos</button>
+                    <button class="boton btn btn-secondary" data-filter=".caninos">Perros</button>
+                    <button class="boton btn btn-secondary" data-filter=".gatos">Gatos</button>
+                    <button class="boton btn btn-secondary" data-filter=".tortugas">Tortugas</button>
+                </div>
+
+                <!--  Se termina el apartado de botones interactivos  -->
+
+		        <!--  comienza la galeria de fotos  -->
+
+                <div class="galeria">
+                    <!--    *****  COMIENZA RECUADRO 1  *****  -->
+                    <div class="caja caninos">
+                        <img src="canino1.jpg">
+                        <div class="cobertura">
+                            <a href="https://es.wikipedia.org/wiki/Canis_familiaris">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 1 *****    -->
+
+			        <!--   *****  COMIENZA RECUADRO 2   *****   -->
+                    <div class="caja caninos">
+                        <img src="canino2.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.nationalgeographic.com.es/animales/perros">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 2 *****    -->
+
+
+			        <!--   *****  COMIENZA RECUADRO 3   *****   -->
+                    <div class="caja gatos">
+                        <img src="gatos1.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.youtube.com/watch?v=MN4DQ_Vd0nE">SABER MÁS</a>
+                        </div>
+                    </div>
+			        <!--     ***** TERMINA RECUADRO 3 *****    -->
+
+			        <!--   *****  COMIENZA RECUADRO 4   *****   -->
+                    <div class="caja gatos">
+                        <img src="gatos2.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.anipedia.net/gatos/">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 4 *****    -->
+
+                    <!--   *****  COMIENZA RECUADRO 5   *****   -->
+                    <div class="caja gatos">
+                        <img src="gatos3.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.nationalgeographic.es/animales/gato-domestico">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 5 *****    -->
+
+                    <!--   *****  COMIENZA RECUADRO 6   *****   -->
+                    <div class="caja tortugas">
+                        <img src="tortugas1.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.youtube.com/watch?v=Kmm86oVpvn8">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 6 *****    -->
+
+                    <!--   *****  COMIENZA RECUADRO 7   *****   -->
+                    <div class="caja tortugas">
+                        <img src="tortugas2.jpg">
+                        <div class="cobertura">
+                            <a href="https://www.nationalgeographic.com.es/animales/tortugas">SABER MÁS</a>
+                        </div>
+                    </div>
+                    <!--     ***** TERMINA RECUADRO 7 *****    -->
+                </div>
+                <!--  Termina la galeria de fotos  -->
+            </main>
+        </section>
+
+        <section id="ubicacion" class="grupodebotones custom">
+            <h2>UBICACIÓN</h2>
+            <p></p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.3308153642424!2d-99.16888681131385!3d19.427020595462754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1725226371225!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+
+        </section>
+    
+
+        <div class="container my-5">
+
+            <footer class="text-center text-lg-start #sidebar" style="background-color;">
+             
+              </div>
+          
+              <!-- Copyright -->
+              <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">Página creada para el programa JA México </a>
+              </div>
+              <!-- Copyright -->
+            </footer>
+            
+          </div>
+
+        </div>
+
+    <!--   JQuery Link  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!--  Isotope Filter Link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!--  script de  java  -->
+
+    <script src="func.js"></script>
+
+     <!--  script de  java para que funcione bootstrap    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!--   para mantener limpio nuestro trabajo se recomienda poner el codigo java en un documento aparte por lo que aqui lo comento  -->
+
+    <!--   <script type="text/javascript">
+        var $galleryContainer = $('.galeria').isotope({
+            itemSelector: '.caja',
+            layoutMode: 'fitRows'
+        })
+
+        $('.grupodebotones .boton').on('click', function(){
+            $('.grupodebotones .boton').removeClass('active');
+            $(this).addClass('active');
+
+            var value = $(this).attr('data-filter');
+            $galleryContainer.isotope({
+                filter: value 
+            })
+        })  
+
+        // aqui cierro Bootstrap
+        // <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script> -->
+
+</body>
+</html>
